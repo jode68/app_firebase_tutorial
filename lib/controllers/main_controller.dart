@@ -25,7 +25,10 @@ class InputController extends AuthService {
 class AuthFunction extends InputController {
   // Login Function
   Future<User?> loginFunc() async {
-    User? result = await login(emailController.text, passwordController.text);
+    User? result = await login(
+      emailController.text.trim(),
+      passwordController.text.trim(),
+    );
     if (result == null) {
       Get.snackbar(
         'Login Error',
@@ -48,7 +51,10 @@ class AuthFunction extends InputController {
 
   // Register Function
   Future<User?> registerFunc() async {
-    User? result = await register(emailController.text, passwordController.text);
+    User? result = await register(
+      emailController.text.trim(),
+      passwordController.text.trim(),
+    );
     if (result == null) {
       Get.snackbar(
         'Register Error',
