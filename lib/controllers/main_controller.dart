@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 class InputController extends AuthService {
   // show password field
   final showPassword = true.obs;
+  var loadingIndicator = false.obs;
 
   // input controller email password
   var emailController = TextEditingController();
@@ -96,8 +97,6 @@ class AuthFunction extends InputController {
 
 class MainController extends AuthFunction {
   // main controller getx
-
-  var loadingIndicator = false.obs;
 
   // page controller and name of pages
   final pageController = PageController();
