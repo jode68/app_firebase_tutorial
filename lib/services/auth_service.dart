@@ -14,7 +14,9 @@ class AuthService extends GetxController {
       );
       return userRegister.user;
     } on FirebaseException catch (error) {
-      errorAuth = error.message.toString();
+      final errorCode = error.code.toString();
+      final errorMessage = error.message.toString();
+      errorAuth = '$errorCode \n \n $errorMessage';
     }
     return null;
   }
@@ -28,7 +30,9 @@ class AuthService extends GetxController {
       );
       return userRegister.user;
     } on FirebaseException catch (error) {
-      errorAuth = error.message.toString();
+      final errorCode = error.code.toString();
+      final errorMessage = error.message.toString();
+      errorAuth = '$errorCode \n \n $errorMessage';
     }
     return null;
   }
