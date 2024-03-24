@@ -34,7 +34,7 @@ class LoginPage extends GetView<MainController> {
                         autocorrect: false,
                         autofocus: false,
                         decoration: const InputDecoration(
-                          hintText: 'email',
+                          hintText: 'Email',
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.email),
                         ),
@@ -49,7 +49,7 @@ class LoginPage extends GetView<MainController> {
                         autocorrect: false,
                         obscureText: controller.showPassword.value,
                         decoration: InputDecoration(
-                          hintText: 'password',
+                          hintText: 'Password',
                           border: InputBorder.none,
                           prefixIcon: const Icon(Icons.lock),
                           suffixIcon: IconButton(
