@@ -28,10 +28,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -64,5 +61,14 @@ class DefaultFirebaseOptions {
     projectId: 'xp68-cd001',
     storageBucket: 'xp68-cd001.appspot.com',
     iosBundleId: 'com.example.appFirebaseTutorial',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyB26FQtN8cPnlmRpgUW4FJlxMg8v25R31s',
+    appId: '1:1091152785269:ios:d780fe849603aaf40bad3c',
+    messagingSenderId: '1091152785269',
+    projectId: 'xp68-cd001',
+    storageBucket: 'xp68-cd001.appspot.com',
+    iosBundleId: 'com.example.appFirebaseTutorial.RunnerTests',
   );
 }
